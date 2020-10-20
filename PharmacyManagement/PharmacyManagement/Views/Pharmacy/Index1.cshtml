@@ -1,0 +1,36 @@
+﻿@model IEnumerable<PharmacyManagement.Models.OrderItem>
+
+@{
+    ViewData["Title"] = "Index1";
+}
+
+<h1>Order Details</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfPurchase)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ItemName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateOfPurchase)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br>
+<br>
+<a asp-controller="Pharmacy" asp-action="Index2">Open Customer List Here</a>

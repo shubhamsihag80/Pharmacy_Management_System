@@ -1,0 +1,48 @@
+﻿@model IEnumerable<PharmacyManagement.Models.Medicine>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Medicine Details</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MedicineId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MedicineName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExpiryDate)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MedicineId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MedicineName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ExpiryDate)
+                </td>
+                <td>
+                    <input type="button" name="button" value="Select Medicine" />
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br>
+<br>
+<a asp-controller="Pharmacy" asp-action="Index1">Order Item List</a>
+
+
