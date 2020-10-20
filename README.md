@@ -9,3 +9,5 @@ Client MVC (i.e., PharmacyManagement) includes all API views and interconnection
 AuthenticationProj is used to authorize the user using correct ceredentials. <br>
 SQL connections are done in appsetting.json for the security purpose. <br>
 
+Worflow and Screenshots of working model are also attached with the project.
+
